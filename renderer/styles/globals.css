@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+
+.main-bg-primary {
+  @apply bg-light-500 dark:bg-dark-500;
+}
+
+.main-bg-secondary {
+  @apply bg-light-400 dark:bg-dark-400;
+}
+
+.main-border {
+  @apply border-light-400 dark:border-dark-400;
+}
+
+.main-border-secondary {
+  @apply border-light-300 dark:border-dark-400;
+}
+
+.button-primary {
+  @apply bg-primary hover:opacity-75;
+}
+
+.button-secondary {
+  @apply border border-light-300 hover:opacity-75 dark:bg-secondary dark:border-secondary;
+}
+
+.header {
+  @apply text-xl text-light-100 font-bold dark:text-dark-100;
+}
+
+.title {
+  @apply text-lg text-light-200 font-semibold dark:text-dark-200;
+}
+
+.subtitle {
+  @apply text-base text-light-300 dark:text-dark-300;
+}
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-light-300 dark:bg-dark-400;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-dark-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+}
+
+@tailwind utilities;

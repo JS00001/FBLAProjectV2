@@ -1,0 +1,50 @@
+#loading-bar-spinner.spinner {
+	left: 50%;
+	margin-left: -20px;
+	top: 50%;
+	margin-top: -20px;
+	position: absolute;
+	z-index: 19 !important;
+	animation: loading-bar-spinner 500ms linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+	width: 40px;
+	height: 40px;
+	border: solid 4px transparent;
+	border-top-color: white !important;
+	border-left-color: white !important;
+	border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+	0% {
+		transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* Background Gradient */
+body {
+	overflow: hidden;
+	background: linear-gradient(-60deg, #00f260, #0575e6);
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
