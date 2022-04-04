@@ -5,9 +5,16 @@ import options from '../../data/options';
 import Select from '../Select/Select';
 import Card from '../Card/Card';
 import Button from '../Button/Button';
+import { useDispatch } from 'react-redux';
+import modalAction from '../../redux/actions/modalAction';
 
 const Sidebar: React.FC = () => {
+	const dispatch = useDispatch();
 	const locations = useFilter();
+
+	const onDownloadClick = () => {
+		dispatch(modalAction.setActiveModal('DOWNLOAD_MODAL'));
+	};
 
 	return (
 		<aside className='main-bg-primary w-96 border-r main-border flex-shrink-0 overflow-y-auto'>
@@ -19,7 +26,7 @@ const Sidebar: React.FC = () => {
 					))}
 				</div>
 				<h1 className='header'>{locations.length} Result(s)</h1>
-				<Button className='w-full' rounded='md'>
+				<Button className='w-full' rounded='md' onClick={onDownloadClick}>
 					Download Results
 				</Button>
 				<div>

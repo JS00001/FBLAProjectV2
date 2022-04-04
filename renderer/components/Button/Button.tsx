@@ -43,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({
 	const buttonClasses = `${colorClasses[color]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${className}`;
 
 	return (
-		<button className={`${buttonClasses} font-medium text-sm`} {...props}>
+		<button className={`${buttonClasses} font-medium text-sm flex justify-center`} {...props}>
 			{loading ? <RiLoader3Line className='animate-spin' size={20} /> : children}
 		</button>
 	);

@@ -5,10 +5,10 @@ import {
 	HiOutlinePresentationChartLine,
 	HiOutlineCurrencyDollar,
 } from 'react-icons/hi';
-import usePageData from '../../hooks/usePageData';
 import Badge from '../Badge/Badge';
 import Empty from '../Empty/Empty';
 import IconData from '../IconData/IconData';
+import usePageData from '../../hooks/usePageData';
 
 const Page: React.FC = () => {
 	const [pageData] = usePageData();
@@ -53,7 +53,7 @@ const Page: React.FC = () => {
 				<IconData
 					icon={<HiOutlineStar className='subtitle' size={30} />}
 					title='Rating'
-					subtitle={pageData.Rating + ' star(s)'}
+					subtitle={pageData.Rating}
 				/>
 				<IconData
 					icon={<HiOutlinePresentationChartLine className='subtitle' size={30} />}
